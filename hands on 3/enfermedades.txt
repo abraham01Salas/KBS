@@ -1,0 +1,33 @@
+;; enfermedades
+(assert (Sarampion fiebre enrojecimiento_de_piel erupcion_cutanea dolor_de_cabeza enrojecimiento_de_ojo))
+(assert (Varicela fiebre enrojecimiento_de_piel erupcion_cutanea dolor_cabeza))
+(assert (Conjuntivitis secrecion_ocular ojos_llorosos enrojecimiento_de_ojo picazon ardor))
+(assert (Escarlatina fiebre enrojecimiento_de_piel erupcion_cutanea puntos_blancos_garganta))
+(assert (Alergia dificultad_para_respirar picazon escurrimiento_nasal enrojecimiento_de_ojos))
+(assert (Gastroenteritis fiebre dolor_abdominal diarrea vomito))
+
+;; determinar enfermedad en base al arbol
+
+(defrule determinar-sarampion
+(Sarampion fiebre enrojecimiento_de_piel erupcion_cutanea dolor_de_cabeza enrojecimiento_de_ojo) => 
+(printout t "Su enfermedad es: Sarampion" crlf))
+
+(defrule determinar-varicela
+(Varicela fiebre enrojecimiento_de_piel erupcion_cutanea dolor_cabeza) => 
+(printout t "Su enfermedad es: Varicela" crlf))
+
+(defrule determinar-conjuntivitis
+(Conjuntivitis secrecion_ocular ojos_llorosos enrojecimiento_de_ojo picazon ardor) => 
+(printout t "Su enfermedad es: Conjuntivitis" crlf))
+
+(defrule determinar-escarlatina
+(Escarlatina fiebre enrojecimiento_de_piel erupcion_cutanea puntos_blancos_garganta) => 
+(printout t "Su enfermedad es: Escarlatina" crlf))
+
+(defrule determinar-alergia
+(Alergia dificultad_para_respirar picazon escurrimiento_nasal enrojecimiento_de_ojos) => 
+(printout t "Su enfermedad es: Alergia" crlf))
+
+(defrule determinar-gastroenteritis
+(Gastroenteritis fiebre dolor_abdominal diarrea vomito) => 
+(printout t "Su enfermedad es: Gastroenteritis" crlf))
